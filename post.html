@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Requests - Kebantai</title>
+    <link rel="stylesheet" href="./post.css">
+    <!-- <link rel="stylesheet" href="calendar_wheel/style.scss"> -->
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div id="logo">
+                <a href="#">KEBANTAI</a>
+            </div>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation" >
+                <li><a href="#" class="active-page">POST REQUESTS</a></li>
+                <li><a href="#">MATCHES</a></li>
+                <li><a href="#">SCHEDULE</a></li>
+                <li><a href="#">CHATROOM</a></li>
+                <li><a href="#">PROFILE</a></li>
+            </ul>
+        </header>
+
+        <!-- ---------------------------------------------------------------------------------------------- -->
+
+        <form action="" class="form" autocomplete="off">
+            <h2 class="form__title">Customize your request</h2>
+
+            <div class="form__prompt">
+                <label for="event-name" class="form__subtitle">Event name : </label>
+                <input class="form__input" type="text" name="event-name" id="event-name" placeholder="ex: Quick Basketball Session!!" autofocus>
+                <span class="form__error">This is a required field!</span>
+            </div>
+
+            <!-- ---------------------------------------------------------------------------------------------- -->
+
+            <div class="form__prompt">
+                <label for="location-name" class="form__subtitle">Location name : </label>
+                <input class="form__input" type="text" name="location-name" id="location-name" placeholder="ex: Orion Sports Center">
+                <span class="form__error">This is a required field!</span>
+            </div>
+
+            <!-- ---------------------------------------------------------------------------------------------- -->
+
+            <div class="form__prompt">
+                <label for="address" class="form__subtitle">Address : </label>
+                <input class="form__input" type="text" name="address" id="address" placeholder="ex: Jl. Dipatiukur no. 9">
+                <span class="form__error">This is a required field!</span>
+            </div>
+
+            <!-- ---------------------------------------------------------------------------------------------- -->
+
+            <div class="form__prompt">
+                <p class="form__subtitle">Sport : </p>
+                <div class="form__selection form__sport">
+                    <div class="basketball-radio">
+                        <input class="form__radio" type="radio" name="sport" id="basketball" value="basketball" checked="checked">
+                        <label for="basketball">Basketball</label>
+                    </div>
+                    <div class="soccer-radio">
+                        <input class="form__radio" type="radio" name="sport" id="soccer" value="soccer">
+                        <label for="soccer">Soccer</label>
+                    </div>
+                    <div class="badminton-radio">
+                        <input class="form__radio" type="radio" name="sport" id="badminton" value="badminton">
+                        <label for="badminton">Badminton</label>
+                    </div>
+                    <div class="volleyball-radio">
+                        <input class="form__radio" type="radio" name="sport" id="volleyball" value="volleyball">
+                        <label for="volleyball">Volleyball</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------------------------------------------------------------------------------- -->
+
+            <div class="form__prompt">
+                <p class="form__subtitle">People preference: </p>
+                <div class="form__selection form__sex">
+                    <div class="anyone-radio">
+                        <input class="form__radio" type="radio" name="sex" id="anyone" value="anyone" checked="checked">
+                        <label for="anyone">Anyone can join</label>
+                    </div>
+                    <div class="male-radio">
+                        <input class="form__radio" type="radio" name="sex" id="male" value="male">
+                        <label for="male">Male only</label>
+                    </div>
+                    <div class="female-radio">
+                        <input class="form__radio" type="radio" name="sex" id="female" value="female">
+                        <label for="female">Female only</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ---------------------------------------------------------------------------------------------- -->
+            
+            <div class="form__prompt">
+                <p class="form__subtitle">Date: </p>
+                <div class="date-selector">
+                    <div class="year" id="year1"></div>
+                    <div class="month" id="month1"></div>
+                    <div class="day" id="day1"></div>
+                </div>
+                <!-- <label>
+                    <input id="mobi-picker" mbsc-input />
+                </label> -->
+            </div>
+            
+            <!-- ---------------------------------------------------------------------------------------------- -->
+
+            <div class="form__prompt">
+                <p class="form__subtitle">Times : </p>
+                <div class="hours">
+                    <label class="time__container">06:00
+                        <input type="checkbox" value="06:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">07:00
+                        <input type="checkbox" value="07:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">08:00
+                        <input type="checkbox" value="08:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">09:00
+                        <input type="checkbox" value="09:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">10:00
+                        <input type="checkbox" value="10:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">11:00
+                        <input type="checkbox" value="11:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">12:00
+                        <input type="checkbox" value="12:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">13:00
+                        <input type="checkbox" value="13:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">14:00
+                        <input type="checkbox" value="14:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">15:00
+                        <input type="checkbox" value="15:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">16:00
+                        <input type="checkbox" value="16:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">17:00
+                        <input type="checkbox" value="17:00">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="time__container">18:00
+                        <input type="checkbox" value="18:00">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <button type="submit">PUBLISH</button>
+        </form>
+    </div>
+    <script src="post.js"></script>
+    <!-- <script src="calendar_wheel/main.js"></script> -->
+</body>
+</html>
